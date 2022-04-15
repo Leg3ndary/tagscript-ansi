@@ -472,7 +472,10 @@ class TAGSCRIPTBlockDirective(rst.Directive):
 
 def setup(app):
     app.require_sphinx('1.0')
-    app.add_config_value('html_ansi_stylesheet', None, 'env')
+    try:
+        app.add_config_value('html_ansi_stylesheet', None, 'env')
+    except:
+        pass
     app.add_directive('tagscript', TAGSCRIPTBlockDirective)
     app.connect('builder-inited', add_stylesheet)
     app.connect('build-finished', copy_stylesheet)
