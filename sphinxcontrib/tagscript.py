@@ -433,8 +433,10 @@ class ANSIColorParser(object):
 
 def add_stylesheet(app):
     if app.config.html_ansi_stylesheet:
-        app.add_stylesheet('ansi.css')
-
+        try:
+            app.add_stylesheet('ansi.css')
+        except:
+            pass
 
 def copy_stylesheet(app, exception):
     if app.builder.name != 'html' or exception:
