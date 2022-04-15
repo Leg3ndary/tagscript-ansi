@@ -68,7 +68,7 @@ def test_setup(app):
     app.add_config_value.assert_called_with(
         'html_ansi_stylesheet', None, 'env')
     app.add_directive.assert_called_with(
-        'ansi-block', ansi.ANSIBlockDirective)
+        'tagscript', ansi.ANSIBlockDirective)
     assert app.connect.call_args_list[:2] == [
         (('builder-inited', ansi.add_stylesheet),),
         (('build-finished', ansi.copy_stylesheet),)]

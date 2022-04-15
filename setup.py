@@ -32,14 +32,14 @@ with open('README') as stream:
 requires = ['Sphinx>=1.0b2']
 
 setup(
-    name='sphinxcontrib-ansi',
-    version='0.6',
-    url='http://bitbucket.org/birkenfeld/sphinx-contrib',
+    name='tagscript-ansi',
+    version='0.1',
+    url='https://github.com/Leg3ndary/tagscript-ansi',
     download_url='http://pypi.python.org/pypi/ansi',
     license='BSD',
-    author='Sebastian Wiesner',
-    author_email='lunaryorn@googlemail.com',
-    description='Sphinx extension ansi',
+    author='Ben Zhou',
+    author_email='tagscript.l@gmail.com',
+    description='Sphinx extension tagscript ansi',
     long_description=long_desc,
     zip_safe=False,
     classifiers=[
