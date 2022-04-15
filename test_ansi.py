@@ -4,7 +4,7 @@
 from docutils import nodes
 from mock import Mock
 
-from sphinxcontrib import ansi
+from sphinxcontrib import tagscript
 
 
 RAWSOURCE = '''\
@@ -13,7 +13,7 @@ RAWSOURCE = '''\
 
 def pytest_funcarg__paragraph(request):
     paragraph = nodes.paragraph()
-    paragraph.append(ansi.ansi_literal_block(RAWSOURCE, RAWSOURCE))
+    paragraph.append(tagscript.ansi_literal_block(RAWSOURCE, RAWSOURCE))
     return paragraph
 
 
@@ -22,7 +22,7 @@ def pytest_funcarg__app(request):
 
 
 def pytest_funcarg__parser(request):
-    return ansi.ANSIColorParser()
+    return tagscript.ANSIColorParser()
 
 
 def _assert_colors(node, *colors):
@@ -63,18 +63,18 @@ def test_parser_colors_parsed(app, parser, paragraph):
 
 
 def test_setup(app):
-    ansi.setup(app)
+    tagscript.setup(app)
     app.require_sphinx.assert_called_with('1.0')
     app.add_config_value.assert_called_with(
         'html_ansi_stylesheet', None, 'env')
     app.add_directive.assert_called_with(
-        'tagscript', ansi.ANSIBlockDirective)
+        'tagscript', tagscript.ANSIBlockDirective)
     assert app.connect.call_args_list[:2] == [
-        (('builder-inited', ansi.add_stylesheet),),
-        (('build-finished', ansi.copy_stylesheet),)]
+        (('builder-inited', tagscript.add_stylesheet),),
+        (('build-finished', tagscript.copy_stylesheet),)]
     assert app.connect.call_args_list[2][0][0] == 'doctree-resolved'
     assert isinstance(app.connect.call_args_list[2][0][1],
-                      ansi.ANSIColorParser)
+                      tagscript.ANSIColorParser)
 
 
 def main():
