@@ -1,13 +1,13 @@
-####################
+############################
 sphinxcontrib-tagscript-ansi
-####################
+############################
 
 This is simply a fork to color tagscript into an ansi readable format.
 
 Use it if you want.
 
-.. code:: rst
-  .. tagscript::
 
-    Tagscript can go here and will be automatically parsed.
+\.\. tagscript\:\:
+
+  Tagscript can go here and will be automatically parsed.
 
