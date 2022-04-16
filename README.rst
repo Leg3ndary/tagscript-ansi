@@ -6,8 +6,8 @@ This is simply a fork to color tagscript into an ansi readable format.
 
 Use it if you want.
 
-```rst
-.. tagscript::
+.. code-block::
+  .. tagscript::
 
-  Tagscript can go here and will be automatically parsed.
-```
+    Tagscript can go here and will be automatically parsed.
+
