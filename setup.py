@@ -26,8 +26,8 @@
 
 from setuptools import setup, find_packages
 
-with open('README.rst') as stream:
-    long_desc = stream.read()
+with open("README.md", "r", encoding="utf-8") as file:
+    long_descr = file.read()
 
 requires = ['Sphinx>=1.0b2']
 
@@ -35,12 +35,13 @@ setup(
     name='tagscript-ansi',
     version='0.1',
     url='https://github.com/Leg3ndary/tagscript-ansi',
-    download_url='http://pypi.python.org/pypi/ansi',
+    download_url='http://pypi.python.org/pypi/tagscript-ansi',
     license='BSD',
     author='Ben Zhou',
     author_email='tagscript.l@gmail.com',
-    description='Sphinx extension tagscript ansi',
-    long_description=long_desc,
+    description="A small example package",
+    long_description=long_descr,
+    long_description_content_type="text/markdown",
     zip_safe=False,
     classifiers=[
         'Development Status :: 4 - Beta',
