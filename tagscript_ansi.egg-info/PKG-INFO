@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: tagscript-ansi
 Version: 0.1.dev20220618
-Summary: Sphinx extension tagscript ansi
+Summary: A small example package
 Home-page: https://github.com/Leg3ndary/tagscript-ansi
 Author: Ben Zhou
 Author-email: tagscript.l@gmail.com
@@ -17,14 +17,21 @@ Classifier: Operating System :: OS Independent
 Classifier: Programming Language :: Python
 Classifier: Topic :: Documentation
 Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
 License-File: LICENSE
 
-####################
+############################
 sphinxcontrib-tagscript-ansi
-####################
+############################
 
 This is simply a fork to color tagscript into an ansi readable format.
 
 Use it if you want.
+
+
+\.\. tagscript\:\:
+
+  Tagscript can go here and will be automatically parsed.
+
 
 
