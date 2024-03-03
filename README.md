@@ -9,3 +9,4 @@ Simply use the tagscript directive and it will be parsed accordingly.
   Tagscript can go here and will be automatically parsed.
 ```
 
+You can view it being used [here](https://btagscript.readthedocs.io/en/latest/index.html)
